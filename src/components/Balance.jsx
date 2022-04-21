@@ -1,6 +1,6 @@
 const Balance = ({ balance }) => {
 	return (
-		<div>Поточний баланс : {balance}</div>
+		<div className="display-6">Поточний баланс : {balance}</div>
 	)
 }
 

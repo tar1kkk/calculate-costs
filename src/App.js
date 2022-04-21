@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers';
 import { Component } from 'react';
 import Balance from './components/Balance';
@@ -47,10 +48,9 @@ class App extends Component {
     return (
       <div>
         <Balance balance={this.state.balance} />
-        <button onClick={this.onIncrease}>Добавить</button>
-        <button onClick={this.onDecrease}>Отнять</button>
+        <button className='btn btn-outline-success' onClick={this.onIncrease}>Добавить</button>
+        <button className='btn btn-outline-danger' onClick={this.onDecrease}>Отнять</button>
         <Form onChange={this.onChange} />
-        <hr></hr>
 
         {this.state.transactions.map((transaction) => (
           <Transactions key={transaction.id} transaction={transaction} />

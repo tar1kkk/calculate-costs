@@ -25,9 +25,9 @@ class Form extends Component {
 	}
 	render() {
 		return (
-			<form onSubmit={this.onSubmit}>
+			<form className="form-control" onSubmit={this.onSubmit}>
 				<input onChange={this.onChange} value={this.state.value} name="balance" type="number" placeholder="Sum" />
-				<button>Save</button>
+				<button className="btn btn-outline-secondary">Save</button>
 			</form>
 		)
 	}
